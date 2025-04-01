@@ -17,6 +17,7 @@ class AllTheBooks extends Component {
                   <Card.Title>{book.title}</Card.Title>
                   <Card.Text>Prezzo: {book.price}€</Card.Text>
                   <Card.Text>Categoria: {book.category}</Card.Text>
+                  <Button variant="success">Buy</Button>
                 </Card.Body>
               </Card>
             </Col>
