@@ -11,7 +11,11 @@ function App() {
       <MyNav />
       <main className="flex-grow-1 container mt-4">
         <Welcome />
-        <Carosel />
+        <div className="mb-4">
+          <Carosel />
+        </div>
+
+        <AllTheBooks />
       </main>
       <MyFooter />
     </div>
