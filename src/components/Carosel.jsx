@@ -10,9 +10,9 @@ class Carosel extends Component {
 
   render() {
     return (
-      <Container className="mt-4">
+      <Container className="mt-4 text-center">
         <Row className="justify-content-center">
-          <Col xs={12} md={8}>
+          <Col xs={12} md={5} className="mx-auto">
             <Carousel
               onSlide={(i) => {
                 this.setState({
@@ -25,10 +25,11 @@ class Carosel extends Component {
                   <img
                     src={book.img}
                     alt={book.title}
-                    className=" w-100"
+                    className="d-block mx-auto"
                     style={{
-                      width: "100%",
-                      height: "auto",
+                      width: "100%", // Occupa tutta la colonna
+                      maxWidth: "500px", // Limite massimo
+                      height: "500px",
                       objectFit: "cover",
                     }}
                   />
@@ -37,9 +38,9 @@ class Carosel extends Component {
             </Carousel>
           </Col>
         </Row>
-        <Row className="justify-content-center">
-          <Col xs={12} md={8} lg={6} className="text-center">
-            <ListGroup>
+        <Row className="justify-content-center ">
+          <Col xs={12} md={5} className="mx-auto">
+            <ListGroup className="text-center">
               <ListGroup.Item>
                 <strong>{this.state.activeBook.title}</strong>
               </ListGroup.Item>

@@ -4,7 +4,9 @@ const MyFooter = function () {
   return (
     <Container fluid className="bg-dark text-light mt-auto py-3">
       <Row>
-        <Col className="text-center">© 2025 - Books</Col>
+        <Col className="text-center text-light">
+          © {new Date().getFullYear()} - Books
+        </Col>
       </Row>
     </Container>
   )

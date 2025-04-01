@@ -11,6 +11,7 @@ function App() {
       <MyNav />
       <main className="flex-grow-1 container mt-4">
         <Welcome />
+        <h1 className=" text-center fw-bold">Libri Horror</h1>
         <div className="mb-4">
           <Carosel />
         </div>
