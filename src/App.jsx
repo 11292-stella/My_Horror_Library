@@ -3,6 +3,7 @@ import MyFooter from "./components/MyFooter"
 import AllTheBooks from "./components/AllTheBooks"
 import "bootstrap/dist/css/bootstrap.min.css"
 import Welcome from "./components/Welcome"
+import Carosel from "./components/carosel"
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <MyNav />
       <main className="flex-grow-1 container mt-4">
         <Welcome />
-        <AllTheBooks />
+        <Carosel />
       </main>
       <MyFooter />
     </div>
