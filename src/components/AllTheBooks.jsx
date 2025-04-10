@@ -11,7 +11,7 @@ class AllTheBooks extends Component {
         <Row className="justify-content-center">
           {HorrorB.map((book) => (
             <Col xs={12} sm={6} md={4} lg={2} key={book.asin} className="mb-3">
-              <Card>
+              <Card data-testid="card">
                 <Card.Img variant="top" src={book.img} />
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
