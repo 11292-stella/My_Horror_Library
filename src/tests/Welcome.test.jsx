@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest"
 import { render, screen, fireEvent } from "@testing-library/react"
 import Welcome from "../components/Welcome"
 import AllTheBooks from "../components/AllTheBooks"
+import NewComment from "../components/NewComment"
 
 describe("component testing", () => {
   it("mounts correctly the component", () => {

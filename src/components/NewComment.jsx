@@ -86,7 +86,7 @@ const NewComment = function (props) {
           <ul className="list-group mb-4">
             {comments.length > 0 ? (
               comments.map((c, i) => (
-                <li key={i} className="list-group-item">
+                <li key={i} className="list-group-item" data-testid="comment">
                   {c.comment}
                 </li>
               ))
