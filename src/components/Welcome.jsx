@@ -3,6 +3,7 @@ import { Alert } from "react-bootstrap"
 const Welcome = function () {
   return (
     <>
+      <h1>Benvenuto nella libreria</h1>
       {["info"].map((variant) => (
         <Alert key={variant} className="text-center" variant={variant}>
           <strong>Benvenuti nel nostro angolo oscuro!</strong> <br />
