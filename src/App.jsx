@@ -10,7 +10,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import NotFound from "./components/NotFound"
 import Menu from "./components/Menu"
 import Details from "./components/Details"
+import { useState } from "react"
+import horrorB from "./horror.json"
+
+import NewComment from "./components/NewComment"
+import DinuovoBook from "./components/DinuovoBook"
+import SingleBook from "./components/SingleBook"
 function App() {
+  const [selectedAsin, setSelectedAsin] = useState(null)
+  const handleBookSelect = (asin) => {
+    console.log("ASIN selezionato:", asin)
+    setSelectedAsin(asin)
+  }
   return (
     <BrowserRouter>
       <div className="d-flex flex-column min-vh-100">
@@ -38,10 +49,22 @@ function App() {
               }
             />
             <Route path="/carosel" element={<Carosel />} />
+            <Route
+              path="/comment"
+              element={
+                <div>
+                  <NewComment asin={selectedAsin} />
+                  <DinuovoBook
+                    libri={horrorB}
+                    onBookSelect={handleBookSelect}
+                  />
+                </div>
+              }
+            />
 
             <Route path="/menu" element={<Menu />} />
             <Route path="/details/:bookasin" element={<Details />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFound asin={selectedAsin} />} />
           </Routes>
 
           <div className="mb-4"></div>

@@ -28,6 +28,9 @@ const MyNav = function () {
               <Link className="nav-link" to={"/carosel"}>
                 carosel
               </Link>
+              <Link className="nav-link" to={"/comment"}>
+                comment
+              </Link>
             </Nav>
             <Nav></Nav>
           </Navbar.Collapse>
